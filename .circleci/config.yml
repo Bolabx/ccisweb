@@ -15,7 +15,7 @@ jobs:
           name: deploy
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
-              sudo ./s3deploy -source=public -region=us-east-1 -bucket=ccisweb-bolabx-use1 
+              ./s3deploy -source=public -region=us-east-1 -bucket=ccisweb-bolabx-use1 
             else
               echo "Not master branch, dry run only"
             fi
