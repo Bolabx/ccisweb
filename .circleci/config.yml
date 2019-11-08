@@ -13,7 +13,7 @@ jobs:
       - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.0.1/s3deploy_2.0.1_Linux-64bit.tar.gz | tar xvz
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR --buildFuture --buildDrafts --buildExpired
       - run: ls ~/hugo
-      - run: ls ~/hugo/~
+      - run: ls ~/hugo/~/hugo
       - deploy:
           name: deploy
           command: |
